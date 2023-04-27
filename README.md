@@ -187,3 +187,5 @@ export default defineConfig({
   ]
 })
 ```
+
+[MIT](./LICENSE) License © 2023 [Hairyf](https://github.com/hairyf)
