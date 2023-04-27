@@ -1,12 +1,7 @@
-import { createUnplugin } from 'unplugin'
-import type { Options } from './types'
+import { unplugin } from './core/unplugin'
 
-export default createUnplugin<Options | undefined>(options => ({
-  name: 'unplugin-starter',
-  transformInclude(id) {
-    return id.endsWith('main.ts')
-  },
-  transform(code) {
-    return code.replace('__UNPLUGIN__', `Hello Unplugin! ${options}`)
-  },
-}))
+export default unplugin
+
+export {
+  z,
+} from 'zod'

@@ -4,6 +4,9 @@ export default <Options>{
   entryPoints: [
     'src/*.ts',
   ],
+  external: [
+    'vite',
+  ],
   clean: true,
   format: ['cjs', 'esm'],
   dts: true,

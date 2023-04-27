@@ -1,17 +1,17 @@
 {
-  "name": "unplugin-starter",
+  "name": "unplugin-env-parsing",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "packageManager": "pnpm@7.1.1",
   "description": "Register global imports on demand for Vite and Webpack",
   "license": "MIT",
-  "homepage": "https://github.com/antfu/unplugin-starter#readme",
+  "homepage": "https://github.com/antfu/unplugin-env-parsing#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/antfu/unplugin-starter.git"
+    "url": "git+https://github.com/antfu/unplugin-env-parsing.git"
   },
   "bugs": {
-    "url": "https://github.com/antfu/unplugin-starter/issues"
+    "url": "https://github.com/antfu/unplugin-env-parsing/issues"
   },
   "keywords": [
     "unplugin",
@@ -84,7 +84,10 @@
     "test": "vitest"
   },
   "dependencies": {
-    "unplugin": "^1.0.1"
+    "kolorist": "^1.8.0",
+    "slash": "3",
+    "unplugin": "^1.0.1",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.33.1",
