@@ -156,13 +156,9 @@ export default defineConfig({
         VITE_ENUM: z.enum(['a', 'b', 'c']),
         VITE_BOOLEAN_VARIABLE: z.boolean(),
         // Custom validator
-        VITE_CUSTOM_VARIABLE: (key, value) => {
-          if (!value)
-            throw new Error(`Missing ${key} env variable`)
-          if (value.endsWith('foo'))
-            throw new Error('Value cannot end with "foo"')
-          return value
-        },
+        VITE_CUSTOM_VARIABLE: z.custom((val: string) => {
+          return /^\d+px$/.test(val)
+        })
       }
     }),
   ],
@@ -183,15 +179,9 @@ export default defineConfig({
   plugins: [
     EnvParsing({
       schema: {
-        VITE_AUTH_API_URL: (key, value) => {
-          if (!value)
-            throw new Error(`Missing ${key} env variable`)
-
-          if (!value.endsWith('/'))
-            return `${value}/`
-
-          return value
-        },
+        VITE_AUTH_API_URL: z
+          .string()
+          .transform(value => value.endsWith('/') ? value : `${value}/`),
       }
     })
   ]
