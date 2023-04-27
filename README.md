@@ -2,7 +2,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/unplugin-env-parsing?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-env-parsing)
 
-parse evn on-demand for Vite, Webpack, Rollup and esbuild. With TypeScript support. Powered by unplugin. [unplugin](https://github.com/unjs/unplugin).
+parse environment for Vite, Webpack, Rollup and esbuild. With TypeScript support. Powered by unplugin. [unplugin](https://github.com/unjs/unplugin).
 
 ## Install
 
