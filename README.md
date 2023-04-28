@@ -139,6 +139,8 @@ declare global {
   interface ImportMetaEnv {
     readonly VITE_APP_NAME: string
     readonly VITE_APP_TITLE: string
+    readonly VITE_API_ID: number
+    readonly VITE_API_HIDDEN_TABS: boolean
   }
 }
 ```
