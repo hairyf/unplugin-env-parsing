@@ -116,6 +116,8 @@ API_KEY = qwertyuiop
 NEXT_PUBLIC_API_BASE_URL = http://example.com/
 VITE_APP_NAME = "name"
 VITE_APP_TITLE = "title"
+VITE_API_ID = 2
+VITE_API_HIDDEN_TABS = false
 ```
 
 Generate the `env.d.ts` file:
@@ -130,6 +132,8 @@ declare global {
       readonly NEXT_PUBLIC_API_BASE_URL: string
       readonly VITE_APP_NAME: string
       readonly VITE_APP_TITLE: string
+      readonly VITE_API_ID: number
+      readonly VITE_API_HIDDEN_TABS: boolean
     }
   }
   interface ImportMetaEnv {
