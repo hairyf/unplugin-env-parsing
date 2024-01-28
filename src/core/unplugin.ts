@@ -6,7 +6,7 @@ import type { Options } from '../types'
 import { generate } from './generate'
 import { validation } from './validators'
 
-export const unplugin = createUnplugin<Options | undefined>((options = {}) => {
+export const unplugin = createUnplugin<Options | undefined>((options = {}, meta) => {
   const {
     mode = 'development',
     dts = 'env.d.ts',
@@ -14,7 +14,6 @@ export const unplugin = createUnplugin<Options | undefined>((options = {}) => {
     schema = {},
     prefixes = '',
   } = options
-
   function validationEnv() {
     const env = loadEnv(mode, dir, prefixes)
     validation(env, schema)
@@ -22,7 +21,7 @@ export const unplugin = createUnplugin<Options | undefined>((options = {}) => {
 
   async function generateCode() {
     const env = loadEnv(mode, dir, prefixes)
-    const code = generate(env)
+    const code = generate(env, meta.framework)
     if (dts !== false)
       await writeFile(dts, code)
   }
