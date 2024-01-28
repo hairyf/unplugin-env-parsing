@@ -1,17 +1,17 @@
 {
   "name": "unplugin-env-parsing",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "packageManager": "pnpm@7.1.1",
   "description": "Register global imports on demand for Vite and Webpack",
   "license": "MIT",
-  "homepage": "https://github.com/antfu/unplugin-env-parsing#readme",
+  "homepage": "https://github.com/hairyf/unplugin-env-parsing#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/antfu/unplugin-env-parsing.git"
+    "url": "git+https://github.com/hairyf/unplugin-env-parsing.git"
   },
   "bugs": {
-    "url": "https://github.com/antfu/unplugin-env-parsing/issues"
+    "url": "https://github.com/hairyf/unplugin-env-parsing/issues"
   },
   "keywords": [
     "unplugin",
