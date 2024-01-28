@@ -152,6 +152,7 @@ unplugin-env-parsing uses the `zod` validator, you do not need to install `zod`,
 you can use it as follows:
 
 ```ts
+import EnvParsing from 'unplugin-env-parsing/vite'
 import { z } from 'unplugin-env-parsing'
 
 export default defineConfig({
@@ -179,7 +180,9 @@ Let's imagine the following case: you want to expose a variable VITE_AUTH_API_UR
 
 ```ts
 // Built-in validation
-import { defineConfig } from 'unplugin-env-parsing/vite'
+import EnvParsing from 'unplugin-env-parsing/vite'
+import { z } from 'unplugin-env-parsing'
+import { defineConfig } from 'vite'
 
 export default defineConfig({
   plugins: [
